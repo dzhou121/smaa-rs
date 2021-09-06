@@ -406,7 +406,7 @@ impl Targets {
             sample_count: 1,
             dimension: wgpu::TextureDimension::D2,
             format: wgpu::TextureFormat::Rgba8Unorm,
-            usage: wgpu::TextureUsage::RENDER_ATTACHMENT | wgpu::TextureUsage::SAMPLED,
+            usage: wgpu::TextureUsages::RENDER_ATTACHMENT | wgpu::TextureUsages::SAMPLED,
             label: None,
         };
 
@@ -475,7 +475,7 @@ impl Resources {
                 sample_count: 1,
                 dimension: wgpu::TextureDimension::D2,
                 format: wgpu::TextureFormat::Rg8Unorm,
-                usage: wgpu::TextureUsage::SAMPLED | wgpu::TextureUsage::COPY_DST,
+                usage: wgpu::TextureUsages::SAMPLED | wgpu::TextureUsages::COPY_DST,
             },
             &AREATEX_BYTES,
         );
@@ -493,7 +493,7 @@ impl Resources {
                 sample_count: 1,
                 dimension: wgpu::TextureDimension::D2,
                 format: wgpu::TextureFormat::R8Unorm,
-                usage: wgpu::TextureUsage::SAMPLED | wgpu::TextureUsage::COPY_DST,
+                usage: wgpu::TextureUsages::SAMPLED | wgpu::TextureUsages::COPY_DST,
             },
             &SEARCHTEX_BYTES,
         );
